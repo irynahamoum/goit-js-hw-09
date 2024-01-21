@@ -80,24 +80,8 @@ const img = images
 gallery.insertAdjacentHTML('afterbegin', img);
 
 const instance = new SimpleLightbox('.gallery a', {
-  overlay: true,
-  overlayOpacity: 0.7,
-  float: true,
-  nav: true,
   navText: ['<', '>'],
-  captions: true,
-  captionSelector: 'img',
-  captionType: 'attr',
   captionsData: 'alt',
-  captionsPosition: 'bottom',
   captionsDelay: 250,
   className: 'modal',
-  closeText: '×',
-  swipeClose: true,
-  showCounter: true,
-  animationSpeed: 200,
-  animationSlide: true,
-  preloading: true,
-  nextUndPreviousImagesEnableKeyboardNavigationAndCloseWithESCKey: true,
-  enableKeyboard: true,
 });

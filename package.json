@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "vite build --base=/vanilla-app-template/",
     "preview": "vite preview",
-    "push": " git add .; git commit -m 'update'; git push;"
+    "push": " git add . && git commit -m 'update' && git push; "
   },
   "devDependencies": {
     "glob": "^8.1.0",
