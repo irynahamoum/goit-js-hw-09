@@ -1,14 +1,14 @@
-const STORAGE_KEY = 'user-data';
+const STORAGE_KEY = 'feedback-form-state';
 
 const form = document.querySelector('.feedback-form');
-const textArea = form.querySelector('textarea');
+const textArea = form.querySelector('.textarea');
 
 form.addEventListener('input', () => {
-  const userName = form.elements.name.value;
+  const userEmail = form.elements.email.value;
   const userMessage = form.elements.message.value;
 
   const data = {
-    name: userName,
+    name: userEmail,
     message: userMessage,
   };
 
@@ -42,7 +42,7 @@ function loadFromLS(key = 'empty') {
 function restoreData() {
   const data = loadFromLS(STORAGE_KEY) || {};
 
-  form.elements.name.value = data.name || 'Anonymous';
+  form.elements.email.value = data.email || '';
   form.elements.message.value = data.message || '';
 }
 
